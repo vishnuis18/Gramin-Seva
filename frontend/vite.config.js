@@ -9,6 +9,7 @@ export default defineConfig({
     proxy: {
       '/api': {
         target: 'https://gramin-seva-qn3q.onrender.com',
+        
         changeOrigin: true,
       }
     }
