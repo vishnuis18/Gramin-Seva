@@ -67,7 +67,7 @@ const startServer = async () => {
     console.log(`✓ Server is running on port ${PORT}`);
     console.log(`✓ Environment: ${process.env.NODE_ENV || 'development'}`);
     console.log(`✓ API Base URL: http://localhost:${PORT}/api`);
-    console.log(`✓ Test OTP: ${process.env.TEST_OTP || '123456'}`);
+    console.log(`✓ Test OTP: ${process.env.TEST_OTP || '56321'}`);
   });
 };
 

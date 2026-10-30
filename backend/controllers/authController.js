@@ -3,7 +3,7 @@ const User = require('../models/User');
 const Technician = require('../models/Technician');
 
 //test OTP from environment
-const TEST_OTP = process.env.TEST_OTP || '123456';
+const TEST_OTP = process.env.TEST_OTP || '56321';
 
 // Store OTPs temporarily (in production, will be using Redis)
 const otpStore = new Map();

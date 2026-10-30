@@ -16,6 +16,7 @@ const LoginPage = () => {
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [testOtp, setTestOtp] = useState('56321');
 
   const handleSendOTP = async (e) => {
     e.preventDefault();
@@ -26,7 +27,8 @@ const LoginPage = () => {
     }
     setLoading(true);
     try {
-      await api('/auth/send-otp', { method: 'POST', body: JSON.stringify({ phone }) });
+      const data = await api('/auth/send-otp', { method: 'POST', body: JSON.stringify({ phone }) });
+      if (data?.testOTP) setTestOtp(data.testOTP);
       setStep(2);
     } catch (err) {
       setError(err.message);
@@ -128,7 +130,7 @@ const LoginPage = () => {
                 error={error}
               />
               <p style={{ marginTop: '8px', fontSize: '12px', color: '#78716C' }}>
-                {t('login.testOtp')} <strong>123456</strong>
+                {t('login.testOtp')} <strong>{testOtp}</strong>
               </p>
             </div>
             <div style={{ display: 'flex', gap: '12px' }}>
