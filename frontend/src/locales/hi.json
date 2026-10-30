@@ -66,7 +66,10 @@
   "detailsTitle": "हमें और बताएं",
   "detailsSubtitle": "समस्या का वर्णन करें और अपना संपर्क नंबर साझा करें।",
   "locationTitle": "यह कहाँ है और कैसा दिखता है?",
-  "locationSubtitle": "स्थान जोड़ें और वैकल्पिक रूप से फोटो संलग्न करें (अधिकतम 5)।"
+  "locationSubtitle": "स्थान जोड़ें और वैकल्पिक रूप से फोटो संलग्न करें (अधिकतम 5)।",
+  "useCurrentLocation": "वर्तमान स्थान का उपयोग करें",
+  "reviewTitle": "अपनी शिकायत की समीक्षा करें",
+  "reviewSubtitle": "सब कुछ ठीक लग रहा है? तैयार होने पर सबमिट करें।"
   },
   "dashboard": {
     "overview": "डैशबोर्ड अवलोकन",
@@ -142,12 +145,14 @@
     "assignedTo": "को सौंपा गया",
     "unassigned": "असाइन नहीं किया गया",
     "specialization": "विशेषज्ञता",
- "optional": "वैकल्पिक"
+ "optional": "वैकल्पिक",
+    "edit": "संपादित करें"
   },
   "steps": {
   "category": "श्रेणी",
   "details": "विवरण",
   "location": "स्थान",
-  "review": "समीक्षा"
+  "review": "समीक्षा",
+  "stepCount": "चरण {{step}} / {{total}}"
 }
 }

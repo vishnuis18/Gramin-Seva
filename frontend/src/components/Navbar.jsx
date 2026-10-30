@@ -116,7 +116,9 @@ const Navbar = ({ activePage, setActivePage }) => {
                 </div>
                 <div style={{ textAlign: 'right' }}>
                   <p style={{ fontSize: '14px', fontWeight: '500', margin: 0 }}>{user?.name}</p>
-                  <p style={{ fontSize: '12px', color: '#78716C', textTransform: 'capitalize', margin: 0 }}>{user?.role}</p>
+                  <p style={{ fontSize: '12px', color: '#78716C', textTransform: 'capitalize', margin: 0 }}>
+                    {t(`login.${user?.role}`, { defaultValue: user?.role })}
+                  </p>
                 </div>
                 <Button variant="ghost" icon={LogOut} onClick={logout}>{t('nav.logout')}</Button>
               </>

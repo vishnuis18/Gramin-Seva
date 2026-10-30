@@ -83,7 +83,7 @@ const CitizenHome = ({ setActivePage }) => {
           <p style={{ color: '#78716C', margin: '0 0 6px', fontSize: 13 }}>{t('citizen.complaintId')}</p>
           <p style={{ fontSize: 34, fontWeight: 800, color: '#2B5A3D', margin: '0 0 28px', letterSpacing: 2 }}>{complaintId}</p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Button variant="primary" size="lg" icon={FileText} onClick={() => setActivePage('complaints')}>View My Complaints</Button>
+            <Button variant="primary" size="lg" icon={FileText} onClick={() => setActivePage('complaints')}>{t('citizen.myComplaints', 'View My Complaints')}</Button>
             <Button variant="outline" size="lg" onClick={() => { setSuccess(false); setStep(1); }}>{t('citizen.submitAnother')}</Button>
           </div>
         </Card>
@@ -229,21 +229,21 @@ const CitizenHome = ({ setActivePage }) => {
   const Step4 = (
     <div style={styles.stepBody}>
       <div style={styles.stepHeading}>
-        <h2 style={styles.stepTitle}>Review your complaint</h2>
-        <p style={styles.stepSubtitle}>Everything look good? Submit when you're ready.</p>
+        <h2 style={styles.stepTitle}>{t('citizen.reviewTitle', 'Review your complaint')}</h2>
+        <p style={styles.stepSubtitle}>{t('citizen.reviewSubtitle', "Everything look good? Submit when you're ready.")}</p>
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
         {[
-          { heading: 'Category', content: (<div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>{CatIcon && <CatIcon size={16} color={categoryColors[formData.category] || '#2B5A3D'} />}<span style={{ fontWeight: 500 }}>{cat?.label}</span></div>), editStep: 1 },
-          { heading: 'Description', content: <span style={{ color: '#57534E', lineHeight: 1.6 }}>{formData.description}</span>, editStep: 2 },
-          { heading: 'Contact', content: <span style={{ color: '#57534E' }}>{formData.phone}</span>, editStep: 2 },
-          { heading: 'Location', content: <span style={{ color: '#57534E' }}>{formData.location.address}</span>, editStep: 3 },
-          images.length > 0 && { heading: `Photos (${images.length})`, content: (<div style={{ display: 'flex', gap: 8 }}>{images.map((img, idx) => <img key={idx} src={URL.createObjectURL(img)} alt="" style={{ width: 44, height: 44, borderRadius: 6, objectFit: 'cover' }} />)}</div>), editStep: 3 },
+          { heading: t('common.category', 'Category'), content: (<div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>{CatIcon && <CatIcon size={16} color={categoryColors[formData.category] || '#2B5A3D'} />}<span style={{ fontWeight: 500 }}>{cat?.label}</span></div>), editStep: 1 },
+          { heading: t('citizen.description', 'Description'), content: <span style={{ color: '#57534E', lineHeight: 1.6 }}>{formData.description}</span>, editStep: 2 },
+          { heading: t('citizen.contactNumber', 'Contact'), content: <span style={{ color: '#57534E' }}>{formData.phone}</span>, editStep: 2 },
+          { heading: t('citizen.location', 'Location'), content: <span style={{ color: '#57534E' }}>{formData.location.address}</span>, editStep: 3 },
+          images.length > 0 && { heading: `${t('citizen.uploadPhotos', 'Photos')} (${images.length})`, content: (<div style={{ display: 'flex', gap: 8 }}>{images.map((img, idx) => <img key={idx} src={URL.createObjectURL(img)} alt="" style={{ width: 44, height: 44, borderRadius: 6, objectFit: 'cover' }} />)}</div>), editStep: 3 },
         ].filter(Boolean).map((row) => (
           <div key={row.heading} style={styles.reviewRow}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
               <span style={styles.reviewLabel}>{row.heading}</span>
-              <button type="button" onClick={() => setStep(row.editStep)} style={styles.editBtn}>Edit</button>
+              <button type="button" onClick={() => setStep(row.editStep)} style={styles.editBtn}>{t('common.edit', 'Edit')}</button>
             </div>
             <div style={{ marginTop: 4 }}>{row.content}</div>
           </div>
@@ -266,7 +266,7 @@ const CitizenHome = ({ setActivePage }) => {
       <div style={{ maxWidth: 680, margin: '0 auto' }}>
         <div style={{ marginBottom: 28 }}>
           <h1 style={{ fontSize: 28, fontWeight: 700, margin: '0 0 4px' }}>{t('citizen.registerComplaint')}</h1>
-          <p style={{ color: '#78716C', margin: 0, fontSize: 14 }}>Step {step} of {TOTAL_STEPS} — {stepMeta[step - 1].label}</p>
+          <p style={{ color: '#78716C', margin: 0, fontSize: 14 }}>{t('steps.stepCount', { step, total: TOTAL_STEPS, defaultValue: `Step ${step} of ${TOTAL_STEPS}` })} — {stepMeta[step - 1].label}</p>
         </div>
         <ProgressHeader />
         <Card style={{ marginTop: 24, padding: '28px 24px', minHeight: 340 }}>

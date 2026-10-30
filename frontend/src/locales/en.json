@@ -68,7 +68,9 @@
   "detailsTitle": "Tell us more",
   "detailsSubtitle": "Describe the problem and share your contact number.",
   "locationTitle": "Where & what does it look like?",
-  "locationSubtitle": "Add the location and optionally attach photos (up to 5)."
+  "locationSubtitle": "Add the location and optionally attach photos (up to 5).",
+  "reviewTitle": "Review your complaint",
+  "reviewSubtitle": "Everything look good? Submit when you're ready."
   },
   "dashboard": {
     "overview": "Dashboard Overview",
@@ -111,6 +113,7 @@
     "phone": "Phone Number",
     "phonePlaceholder": "Enter 10-digit phone number",
     "specialization": "Specialization",
+
     "addTechnician": "Add Technician",
     "adding": "Adding...",
     "techniciansList": "Technicians List",
@@ -143,12 +146,14 @@
     "continue": "Continue",
  "optional": "optional",
     "unassigned": "Unassigned",
-    "specialization": "Specialization"
+    "specialization": "Specialization",
+    "edit": "Edit"
   },
   "steps": {
   "category": "Category",
   "details": "Details",
   "location": "Location",
-  "review": "Review"
+  "review": "Review",
+  "stepCount": "Step {{step}} of {{total}}"
 }
 }

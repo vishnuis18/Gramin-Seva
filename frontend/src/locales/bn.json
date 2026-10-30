@@ -32,6 +32,8 @@
     "verifying": "যাচাই করা হচ্ছে..."
   },
   "citizen": {
+    "issueTitle": "সমস্যাটি কী?",
+    "issueSubtitle": "আপনার অভিযোগের সাথে মেলে এমন বিভাগটি নির্বাচন করুন।",
     "registerComplaint": "নতুন অভিযোগ নিবন্ধন করুন",
     "fillDetails": "আপনার অভিযোগ জমা দিতে নীচের বিবরণ পূরণ করুন",
     "selectCategory": "বিভাগ নির্বাচন করুন",
@@ -60,7 +62,14 @@
     "myComplaints": "আমার অভিযোগ",
     "loadingComplaints": "অভিযোগ লোড হচ্ছে...",
     "noComplaints": "কোনো অভিযোগ পাওয়া যায়নি। হোম পেজ থেকে একটি নতুন অভিযোগ জমা দিন।",
-    "viewDetails": "বিবরণ দেখুন"
+    "viewDetails": "বিবরণ দেখুন",
+    "useCurrentLocation": "বর্তমান অবস্থান ব্যবহার করুন",
+    "detailsTitle": "আমাদের আরও জানান",
+    "detailsSubtitle": "সমস্যাটি বর্ণনা করুন এবং আপনার যোগাযোগ নম্বর দিন।",
+    "locationTitle": "এটি কোথায় এবং দেখতে কেমন?",
+    "locationSubtitle": "অবস্থান যোগ করুন এবং ছবি সংযুক্ত করুন (সর্বোচ্চ ৫টি)।",
+    "reviewTitle": "আপনার অভিযোগ পর্যালোচনা করুন",
+    "reviewSubtitle": "সবকিছু ঠিক আছে? প্রস্তুত হলে জমা দিন।"
   },
   "dashboard": {
     "overview": "ড্যাশবোর্ড ওভারভিউ",
@@ -130,6 +139,16 @@
     "date": "তারিখ",
     "assignedTo": "কে নিয়োগ করা হয়েছে",
     "unassigned": "নিয়োগ করা হয়নি",
-    "specialization": "বিশেষত্ব"
+    "specialization": "বিশেষত্ব",
+    "back": "পিছনে",
+    "continue": "চালিয়ে যান",
+    "edit": "সম্পাদনা"
+  },
+  "steps": {
+    "category": "বিভাগ",
+    "details": "বিবরণ",
+    "location": "অবস্থান",
+    "review": "পর্যালোচনা",
+    "stepCount": "ধাপ {{step}} / {{total}}"
   }
 }
